@@ -276,13 +276,13 @@ class ConferenceApi(remote.Service):
                 setattr(request, df, DEFAULTS[df])
 
         # convert dates from strings to Date objects; set month based on start_date
-        if data['startDate']:
-            data['startDate'] = datetime.strptime(data['startDate'][:10], "%Y-%m-%d").date()
-            data['month'] = data['startDate'].month
-        else:
-            data['month'] = 0
-        if data['endDate']:
-            data['endDate'] = datetime.strptime(data['endDate'][:10], "%Y-%m-%d").date()
+        #if data['startDate']:
+        #    data['startDate'] = datetime.strptime(data['startDate'][:10], "%Y-%m-%d").date()
+        #    data['month'] = data['startDate'].month
+        #else:
+        #    data['month'] = 0
+        #if data['endDate']:
+        #    data['endDate'] = datetime.strptime(data['endDate'][:10], "%Y-%m-%d").date()
 
         # set seatsAvailable to be same as maxAttendees on creation
         if data["maxAttendees"] > 0:
